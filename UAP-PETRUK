@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string.h>
 #include<stdlib.h>
+#include<stack>
+
 using namespace std;
 
 class buku{
@@ -80,5 +82,28 @@ int main(){
 		B[a]->bukubuku();
 		break;
 	}
+}
+
+	if(a==1)
+	cout<<"\nBuku tersebut tidak ada stok";
+	break;
+		case 3: cin.ignore();
+		cout<<"\nMasukkan Judul Buku : "; cin.getline(judulbuku,30);
+		cout<<"Masukkan Nama Penerbit : ";  cin.getline(penerbitbuku,30);
+		for(a=0;a<i;a++) {
+		if(B[a]->search(judulbuku,penerbitbuku)) {
+		cout<<"\nBuku Berhasil Ditemukan!";
+		B[a]->showdata();
+		break;
+	}
+}
+	if(a==i)
+	cout<<"\nBuku tersebut tidak ada stok";
+	break;
+		case 4: exit(0);
+		default: cout<<"\nPilihan tidak ditemukan"; 
+	}
+}
+return 0;
 }
 
