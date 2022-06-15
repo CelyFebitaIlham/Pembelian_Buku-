@@ -50,3 +50,35 @@ void showdata() {
 				cout<<"\nBuku tidak ada di stok";
 			} 
 };
+
+int main(){
+	buku *B[30];
+	int i=0,r,a,pilihan;
+	char judulbuku[30],penerbitbuku[30];
+	
+	while(1){
+		cout<<"\n=======  MENU  =======\n"
+		<<"\n1. Menambah Buku Baru"
+		<<"\n2. Membeli Buku"
+		<<"\n3. Mencari Buku"
+		<<"\n4. Exit"
+		<<"\n\nMasukkan Pilihan : ";
+		cin>>pilihan;
+		
+	switch(pilihan) {
+		case 1: B[i] = new buku;
+		B[i]->newdata();
+		i++;
+		system("CLS");
+		break;
+		
+		case 2: cin.ignore();
+		cout<<"\nMasukkan Judul Buku : "; cin.getline(judulbuku,30);
+		cout<<"Masukkan Nama Penerbit : ";  cin.getline(penerbitbuku,30);
+		for(a=0;a<i;a++) {
+		if(B[a]->search(judulbuku,penerbitbuku)) {
+		B[a]->bukubuku();
+		break;
+	}
+}
+
