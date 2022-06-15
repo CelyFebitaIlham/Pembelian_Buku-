@@ -24,3 +24,29 @@ class buku{
 			cout<<"Masukkan Stok Barang : ";   cin>>*stok;    
 		}
 		 
+void showdata() {
+			cout<<"\nNama Penerbit : "<<penerbit;
+			cout<<"\nJudul Buku : "<<judul;
+			cout<<"\nHarga Buku : "<<*harga;
+			cout<<"\nStok Barang : "<<*stok;    
+		}
+		
+		int search(char buku1[30],char buku2[30] ) {
+			if(strcmp(buku1,judul)==0 && strcmp(buku2,penerbit)==0)
+			return 1;
+			else return 0; 
+		}
+		
+		void bukubuku(){
+			int jumlah;
+			cout<<"\nMasukkan Jumlah Buku yang ingin di beli : ";
+			cin>>jumlah;
+			if(jumlah<=*stok){
+				*stok=*stok-jumlah;
+				cout<<"\nBuku Berhasil Dibeli";
+				cout<<"\nHarga Buku : Rp. "<<(*harga)*jumlah;
+			}
+			else
+				cout<<"\nBuku tidak ada di stok";
+			} 
+};
