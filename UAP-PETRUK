@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string.h>
+#include<stdlib.h>
+using namespace std;
+
+class buku{
+	private: 
+		char *penerbit,*judul,*publisher;
+		float *harga;
+		int *stok;
+		
+	public: 
+		buku(){
+			penerbit= new char[30];
+			judul=new char[30];
+			harga= new float;
+			stok=new int;
+		}
+		void newdata(){
+			cin.ignore();
+			cout<<"Masukkan Nama Penerbit : ";      cin.getline(penerbit,30);
+			cout<<"Masukkan Judul Buku : ";       cin.getline(judul,30);
+			cout<<"Masukkan Harga Buku : ";            cin>>*harga;
+			cout<<"Masukkan Stok Barang : ";   cin>>*stok;    
+		}
+		 
